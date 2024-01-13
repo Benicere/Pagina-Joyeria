@@ -4,6 +4,11 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --primary-color: #ddd4cd;
+  --secondary-color: #b19d84;
+}
+
 body {
   margin: 0;
 }
@@ -18,51 +23,64 @@ a {
   text-decoration: none;
 }
 
-.logo_inicio {
+.inicio_header {
   position: fixed;
-  display: inline-flex;
+  top: 0;
+  border-bottom: 3px solid #ddd4cd;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  z-index: 1;
-  margin-left: 2rem;
+}
+
+.inicio_div_header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 0px 32px;
+  max-width: 1200px;
+}
+
+.inicio_logo {
+  font-size: 24px;
   color: black;
-  padding-top: 1rem;
   justify-content: flex-start;
-  flex-shrink: 1; /* no anda */
+  width: 100%;
 }
 
 .inicio_nav {
-  position: fixed;
-  display: flex;
   width: 100%;
-  height: 80px;
-  background-color: #fff;
-  border-bottom: medium solid #ddd4cd;
   justify-content: center;
-  top: 0;
+  align-items: center;
 }
 
 .inicio_ul_linksInicio {
   list-style: none;
-  display: inline-flex;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  gap: 25px;
 }
 
 .inicio_ul_linksInicio a {
-  color: #333;
-  font-size: 1.3rem;
-  margin: 5rem;
+  color: black;
+  font-size: 16px;
 }
 
-.inicio_nav .inicio_contacto {
-  list-style: none;
+.inicio_div_contacto {
+  width: 100%;
   display: flex;
-  color: #333;
-  font-size: 1.3rem;
-  margin: 1rem;
-  justify-content: end;
-  align-items: center; /* no anda */
+  justify-content: flex-end;
+}
+
+.inicio_a_contacto {
+  background-color: var(--primary-color);
+  padding: 10px 14px;
+  border-radius: 5px;
+  list-style: none;
+  color: black;
+  font-size: 18px;
 }
 
 .inicio_h1 {
