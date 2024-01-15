@@ -7,10 +7,14 @@ html {
 :root {
   --primary-color: #ddd4cd;
   --secondary-color: #b19d84;
+  --primary-light-color: #f8f4f1;
 }
 
 body {
   margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 *,
@@ -122,6 +126,10 @@ a {
 .inicio_home_article .item:nth-child(4) {
   grid-row-start: 1;
   grid-row-end: 3;
+}
+
+.inicio_home {
+  background-color: var(--primary-light-color);
 }
 
 .item img {
