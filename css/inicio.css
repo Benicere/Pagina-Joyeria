@@ -130,7 +130,12 @@ a {
   object-fit: cover;
 }
 
-/* .inicio_home_Section1 .item {
-  justify-content: center;
-  align-items: center;
-} */
+.inicio_homejoyeria {
+  font-size: 64px;
+  color: var(--secondary-color);
+  padding-bottom: 4rem;
+}
+
+.inicio_home_ul :not(:first-child) {
+  font-size: 32px;
+}
