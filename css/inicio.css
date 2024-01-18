@@ -200,3 +200,19 @@ a {
   border: none;
   border-right: 20px solid white;
 }
+
+.inicio_galeria_fotos {
+  display: flex;
+  justify-content: center;
+}
+
+.inicio_galeria_fotos_grid {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 1200px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 40px;
+  background-color: blue;
+}
