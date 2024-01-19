@@ -17,13 +17,15 @@ html {
 
 body {
   font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
 }
 
 a {
   text-decoration: none;
 }
+
+/* Inicio del Header */
 
 .inicio_header {
   position: fixed;
@@ -35,26 +37,39 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
   z-index: 999;
 }
 
 .inicio_div_header {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  margin: 0px 40px;
   max-width: 1200px;
 }
 
 .inicio_logo {
-  font-size: 24px;
+  font-size: 28px;
   color: black;
-  justify-content: flex-start;
+  white-space: nowrap;
   width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .inicio_nav {
   width: 100%;
+  display: flex;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -62,19 +77,18 @@ a {
 .inicio_ul_linksInicio {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 25px;
+  gap: 10px;
 }
 
 .inicio_ul_linksInicio a {
   color: black;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .inicio_div_contacto {
-  width: 100%;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 
 .inicio_a_contacto {
@@ -91,6 +105,82 @@ a {
   background-color: var(--primary-color);
   color: #000;
 }
+
+/* Media queries para pantalla más pequeña (mobile) */
+@media screen and (max-width: 640px) {
+  .menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .inicio_nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .inicio_nav.active {
+    display: flex;
+  }
+
+  .inicio_ul_linksInicio {
+    list-style: none;
+  }
+
+  .inicio_ul_linksInicio a {
+    color: black;
+    font-size: 16px;
+    display: block;
+  }
+
+  .inicio_div_contacto {
+    display: none;
+  }
+
+  .inicio_logo {
+    margin-bottom: 10px;
+  }
+}
+
+.menu-emergente {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.menu-emergente ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-emergente a {
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Fin de header */
+
+/* main */
 
 .inicio_home_ul {
   list-style: none;
@@ -168,6 +258,43 @@ a {
   color: rgba(0, 0, 0, 0.7);
 }
 
+@media screen and (max-width: 640px) {
+  .inicio_home_article .item1 {
+    margin-bottom: 20px;
+  }
+
+  .inicio_home_article .item2,
+  .inicio_home_article .item3 {
+    display: none; /* Ocultar las imágenes item2 e item3 en la versión móvil */
+  }
+
+  .inicio_home_article {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .inicio_home_article .item1,
+  .inicio_home_article .item2,
+  .inicio_home_article .item3,
+  .inicio_home_article .item4 {
+    grid-column: 1;
+  }
+
+  .inicio_home_div1200 {
+    width: 100%;
+    margin: 20px;
+  }
+
+  .inicio_home_article {
+    display: block;
+  }
+
+  .slick-slider {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .inicio_titulo_galeria {
   display: flex;
   justify-content: center;
@@ -181,6 +308,7 @@ a {
   font-size: 40px;
   font-weight: 300;
   /* text-align: center; */
+  margin-bottom: 20px;
 }
 
 .inicio_galeria_select {
@@ -287,11 +415,33 @@ a {
   }
 }
 
+/*  */
+
+/* Estilos generales para la sección de contacto */
+.contacto-section {
+  text-align: center; /* Centrar el contenido en dispositivos más grandes */
+  padding: 40px 0; /* Ajustar el espacio interno según sea necesario */
+}
+
+/* Estilos para la disposición 50/50 en dispositivos más grandes */
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap; /* Permitir el cambio de fila en dispositivos más pequeños */
+  justify-content: center;
+}
+
+.formulario-container,
+.info-container {
+  width: 100%; /* Ocupar todo el ancho en dispositivos más pequeños */
+  max-width: 500px; /* Limitar el ancho en dispositivos más grandes */
+  margin: 0 10px; /* Añadir espacio entre los contenedores en dispositivos más grandes */
+}
+
+/* Estilos para el formulario */
 form {
-  max-width: 500px;
-  margin: 20px auto;
+  max-width: 100%;
   background-color: #fff;
-  padding: 50px;
+  padding: 30px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -321,16 +471,57 @@ input[type="submit"] {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.inicio_contacto_submit:hover {
+input[type="submit"]:hover {
   background-color: var(--primary-color);
   color: #000;
 }
 
-@media (max-width: 600px) {
-  form {
-    max-width: 100%;
-  }
+/* Nuevos estilos para la sección de contacto, excluyendo el formulario */
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 90px; /* Ajusta el espacio superior según sea necesario */
 }
+
+.info-box {
+  width: 30%; /* Ajusta el ancho de cada caja de información según sea necesario */
+  margin-bottom: 20px; /* Nueva separación entre cajas de información */
+}
+
+.info-box h4 {
+  font-size: 24px; /* Ajusta el tamaño del título según sea necesario */
+  margin-bottom: 10px; /* Ajusta el espacio entre el título y el texto según sea necesario */
+}
+
+.info-box p {
+  font-size: 20px; /* Ajusta el tamaño del texto según sea necesario */
+}
+
+.redes-sociales-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.red-social-image {
+  width: 18%; /* Ajusta el ancho de cada botón de red social según sea necesario */
+}
+
+.red-social-image img {
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.red-social-image img:hover {
+  transform: scale(1.1);
+}
+
+/*       */
 
 .container {
   width: 80%;
@@ -340,26 +531,42 @@ input[type="submit"] {
 footer {
   background-color: #333;
   color: #fff;
-  padding: 20px 0;
+  padding: 20px 0; /* Reduje la altura del padding superior e inferior para dispositivos móviles */
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Cambiado a disposición vertical por defecto para móviles */
+  align-items: center; /* Centrado en dispositivos móviles */
 }
 
 .footer-logo img {
-  max-width: 100px;
+  max-width: 150px; /* Reduje el tamaño máximo del logo para dispositivos móviles */
+  margin-bottom: 10px; /* Añadido espacio entre el logo y el título en móviles */
+}
+
+.footer-center {
+  text-align: center;
+  margin-bottom: 15px; /* Añadida distancia entre el título y la lista */
+}
+
+.footer-title {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 18px; /* Reduje el tamaño del título para dispositivos móviles */
 }
 
 .footer-links ul {
   list-style: none;
   display: flex;
+  flex-direction: column; /* Cambiado a disposición vertical para móviles */
+  font-size: 16px; /* Reduje el tamaño de fuente para dispositivos móviles */
+  justify-content: center; /* Centrado horizontalmente */
+  align-items: center; /* Centrado verticalmente */
 }
 
 .footer-links ul li {
-  margin-right: 20px;
+  margin-bottom: 8px; /* Añadido espacio entre elementos de la lista en móviles */
 }
 
 .footer-links ul li a {
@@ -368,6 +575,50 @@ footer {
 }
 
 .footer-bottom {
-  margin-top: 20px;
+  margin-top: 10px; /* Ajuste de espacio en la parte inferior para dispositivos móviles */
   text-align: center;
+}
+
+/* Consultas de medios para ajustar estilos en dispositivos más grandes */
+
+@media (min-width: 640px) {
+  footer {
+    padding: 30px 0; /* Restauré la altura del padding para tamaños de pantalla mayores a 640px */
+  }
+
+  .footer-content {
+    flex-direction: row; /* Cambiado a disposición horizontal para tabletas y dispositivos más grandes */
+    justify-content: space-between;
+  }
+
+  .footer-logo img {
+    max-width: 200px; /* Aumenté el tamaño máximo del logo para tamaños de pantalla mayores a 640px */
+    margin-bottom: 0; /* Eliminé el espacio entre el logo y el título en tabletas y dispositivos más grandes */
+  }
+
+  .footer-center {
+    text-align: left;
+    margin-bottom: 0; /* Eliminada la distancia entre el título y la lista en tabletas y dispositivos más grandes */
+  }
+
+  .footer-title {
+    font-size: 24px; /* Aumenté el tamaño del título para tamaños de pantalla mayores a 640px */
+    text-align: center; /* Añadida alineación al centro para tamaños de pantalla mayores a 640px */
+    margin-bottom: 10px; /* Añadida distancia entre el título y la lista en tabletas y dispositivos más grandes */
+  }
+
+  .footer-links ul {
+    flex-direction: row; /* Cambiado a disposición horizontal para tabletas y dispositivos más grandes */
+    justify-content: center; /* Centrado horizontalmente */
+    align-items: center; /* Centrado verticalmente */
+  }
+
+  .footer-links ul li {
+    margin-bottom: 0; /* Eliminé el espacio entre elementos de la lista en tabletas y dispositivos más grandes */
+    margin-right: 20px; /* Añadido espacio entre elementos de la lista en tabletas y dispositivos más grandes */
+  }
+
+  .footer-links ul li:last-child {
+    margin-right: 0; /* Eliminé el margen derecho del último elemento de la lista en tabletas y dispositivos más grandes */
+  }
 }
