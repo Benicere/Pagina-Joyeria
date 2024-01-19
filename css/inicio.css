@@ -35,6 +35,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
 }
 
 .inicio_div_header {
@@ -77,12 +78,18 @@ a {
 }
 
 .inicio_a_contacto {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   padding: 10px 14px;
   border-radius: 5px;
   list-style: none;
-  color: black;
+  color: #fff;
   font-size: 18px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.inicio_a_contacto:hover {
+  background-color: var(--primary-color);
+  color: #000;
 }
 
 .inicio_home_ul {
@@ -194,12 +201,14 @@ a {
   padding: 0 10px;
   margin: 0 10px;
   text-indent: 20px;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: none;
   border-right: 20px solid white;
 }
+
+/*   */
+
+/* Estilos para la tarjeta de producto dentro de una estructura de grid */
 
 .inicio_galeria_fotos {
   display: flex;
@@ -211,8 +220,154 @@ a {
   place-items: center;
   width: 100%;
   max-width: 1200px;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
   margin: 40px;
-  background-color: blue;
+}
+
+/* Estilos de la tarjeta */
+
+.product-card {
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  padding: 10px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-details {
+  padding: 16px;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-type {
+  font-size: 16px;
+  color: #e44d26;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #777;
+}
+
+@media (max-width: 1024px) {
+  .inicio_galeria_fotos_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .inicio_galeria_fotos_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Estilos específicos para pantallas pequeñas (<600px) */
+
+@media (max-width: 640px) {
+  .inicio_galeria_fotos_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: var(--secondary-color);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.inicio_contacto_submit:hover {
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  form {
+    max-width: 100%;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-width: 100px;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+}
+
+.footer-links ul li {
+  margin-right: 20px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
 }
