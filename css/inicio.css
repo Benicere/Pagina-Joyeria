@@ -308,7 +308,7 @@ a {
   font-size: 40px;
   font-weight: 300;
   /* text-align: center; */
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 
 .inicio_galeria_select {
@@ -428,6 +428,7 @@ a {
   display: flex;
   flex-wrap: wrap; /* Permitir el cambio de fila en dispositivos más pequeños */
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .formulario-container,
@@ -616,6 +617,163 @@ footer {
   .footer-links ul li {
     margin-bottom: 0; /* Eliminé el espacio entre elementos de la lista en tabletas y dispositivos más grandes */
     margin-right: 20px; /* Añadido espacio entre elementos de la lista en tabletas y dispositivos más grandes */
+  }
+
+  .footer-links ul li:last-child {
+    margin-right: 0; /* Eliminé el margen derecho del último elemento de la lista en tabletas y dispositivos más grandes */
+  }
+}
+
+/* Nuevo CSS footer */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* header { */
+/* Estilos para el encabezado */
+/* } */
+
+/* .inicio_home_section { */
+/* Estilos para la sección de inicio */
+/* } */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0; /* Reduje la altura del padding superior e inferior para dispositivos móviles */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Cambiado a disposición vertical por defecto para móviles */
+  align-items: center; /* Centrado en dispositivos móviles */
+}
+
+.footer-logo img {
+  max-width: 150px; /* Reduje el tamaño máximo del logo para dispositivos móviles */
+  margin-bottom: 10px; /* Añadido espacio entre el logo y el título en móviles */
+}
+
+.footer-logo p {
+  text-align: center; /* Centrado del texto debajo del logo */
+}
+
+.footer-center {
+  text-align: center;
+  margin-bottom: 15px; /* Añadida distancia entre el título y la lista */
+}
+
+.footer-title {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 18px; /* Reduje el tamaño del título para dispositivos móviles */
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-around; /* Alinea los elementos horizontalmente */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en una nueva línea si no hay suficiente espacio */
+}
+
+.info-box {
+  text-align: center;
+  flex-basis: 45%; /* Ajusta el ancho de cada caja de información */
+  margin: 10px; /* Añadido espacio alrededor de cada caja de información */
+}
+
+.info-box h4 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.redes-sociales-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-links {
+  text-align: center; /* Centrado del título Menú */
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centrado horizontalmente */
+  align-items: center; /* Centrado verticalmente */
+  font-size: 16px; /* Reduje el tamaño de fuente para dispositivos móviles */
+}
+
+.footer-links ul li {
+  margin: 0 20px; /* Añadido espacio entre elementos de la lista */
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-bottom {
+  margin-top: 10px; /* Ajuste de espacio en la parte inferior para dispositivos móviles */
+  text-align: center;
+}
+
+/* Consultas de medios para ajustar estilos en dispositivos más grandes */
+
+@media (min-width: 640px) {
+  footer {
+    padding: 30px 0; /* Restauré la altura del padding para tamaños de pantalla mayores a 640px */
+  }
+
+  .footer-content {
+    flex-direction: row; /* Cambiado a disposición horizontal para tabletas y dispositivos más grandes */
+    justify-content: space-between;
+  }
+
+  .footer-logo img {
+    max-width: 200px; /* Aumenté el tamaño máximo del logo para tamaños de pantalla mayores a 640px */
+    margin-bottom: 0; /* Eliminé el espacio entre el logo y el título en tabletas y dispositivos más grandes */
+  }
+
+  .footer-logo p {
+    text-align: left; /* Alineación del texto debajo del logo para tamaños de pantalla mayores a 640px */
+  }
+
+  .footer-center {
+    text-align: left;
+    margin-bottom: 0; /* Eliminada la distancia entre el título y la lista en tabletas y dispositivos más grandes */
+  }
+
+  .footer-title {
+    font-size: 24px; /* Aumenté el tamaño del título para tamaños de pantalla mayores a 640px */
+    text-align: center; /* Añadida alineación al centro para tamaños de pantalla mayores a 640px */
+    margin-bottom: 10px; /* Añadida distancia entre el título y la lista en tabletas y dispositivos más grandes */
+  }
+
+  .info-container {
+    flex-direction: row; /* Cambiado a disposición horizontal para tabletas y dispositivos más grandes */
+  }
+
+  .info-box {
+    flex: 1; /* Distribución uniforme del espacio entre las cajas de información en tabletas y dispositivos más grandes */
+  }
+
+  .info-box h4 {
+    font-size: 18px; /* Reduje el tamaño del título para tabletas y dispositivos más grandes */
+  }
+
+  .redes-sociales-images {
+    order: -1; /* Cambiado el orden para mover las redes sociales al lado derecho en tabletas y dispositivos más grandes */
+  }
+
+  .footer-links ul {
+    flex-direction: row; /* Cambiado a disposición horizontal para tabletas y dispositivos más grandes */
+  }
+
+  .footer-links ul li {
+    margin: 0 20px; /* Añadido espacio entre elementos de la lista */
   }
 
   .footer-links ul li:last-child {
