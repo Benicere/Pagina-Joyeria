@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/inicio.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <!--  -->
     <!-- Roboto serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,7 @@
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <nav class="inicio_nav">
       <ul class="inicio_ul_linksInicio">
-        <li><a href="inicio.html">INICIO</a></li>
+        <li><a href="index.html">INICIO</a></li>
         <li><a href="galeria.html">GALERÍA</a></li>
         <li><a href="sobremi.html">SOBRE MÍ</a></li>
       </ul>
@@ -247,45 +247,13 @@
 
 
 
-    <section class="contacto-section">
-      <div class="inicio_titulo_galeria">
-        <h4 class="inicio_titulo_galeria_h2">Contacto</h4>
-      </div>
-    
-      <div class="contacto-container">
-        <div class="info-container">
-          <div class="info-box">
-            <h4>Horario</h4>
-            <p>Lunes a Viernes: 9am - 6pm</p>
-          </div>
-    
-          <div class="info-box">
-            <h4>Teléfono</h4>
-            <p>+123 456 789</p>
-          </div>
-    
-          <div class="info-box">
-            <h4>Redes Sociales</h4>
-            <div class="redes-sociales-images">
-              <div class="red-social-image">
-                <img src="images/Vector.png" alt="Red Social 1">
-              </div>
-              <div class="red-social-image">
-                <img src="images/Vector (1).png" alt="Red Social 2">
-              </div>
-              <div class="red-social-image">
-                <img src="images/Vector (2).png" alt="Red Social 3">
-              </div>
-              <div class="red-social-image">
-                <img src="images/Vector (3).png" alt="Red Social 4">
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <div class="formulario-container">
+    <div class="inicio_titulo_galeria">
+      <h4 class="inicio_titulo_galeria_h2">Contacto</h2>
+    </div>
+    <section class="contact-section">
+        <div class="contact-form-container">
           <form action="procesar_formulario.php" method="post">
-            <!-- Cambia "procesar_formulario.php" al nombre de tu script de procesamiento de formulario -->
+            <!-- Change "procesar_formulario.php" to the name of your form processing script -->
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
     
@@ -295,68 +263,64 @@
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
     
-            <input class="inicio_contacto_submit" type="submit" value="Enviar">
+            <input class="contact-submit" type="submit" value="Enviar">
           </form>
         </div>
       </div>
     </section>
-
-
-
+    
+    <!-- Footer Section -->
     <footer>
-      <div class="container">
+      <div class="footer-container">
         <div class="footer-content">
           <div class="footer-logo">
-            <img src="images/logoJoyeriaPallarols 1.png" alt="Logo">
+            <img class="logo-pallarols" src="images/logoJoyeriaPallarols 1.png" alt="Logo">
             <p>Pallarols Maria Carolina</p>
-          </div>
-          <div class="footer-center">
-            <p class="footer-title">Joyería<br>Pallarols Maria Carolina</p>
-            <div class="info-container">
-              <div class="info-box">
-                <h4>Horario</h4>
-                <p>Lunes a Viernes: 9am - 6pm</p>
+            <div class="social-media-images">
+              <div class="social-media-image">
+                <img src="images/Instagram.svg" alt="Red Social 1">
               </div>
-  
-              <div class="info-box">
-                <h4>Teléfono</h4>
-                <p>+123 456 789</p>
+              <div class="social-media-image">
+                <img src="images/Whasap Logo.svg" alt="Red Social 2">
               </div>
-  
-              <div class="info-box">
-                <h4>Redes Sociales</h4>
-                <div class="redes-sociales-images">
-                  <div class="red-social-image">
-                    <img src="images/Vector.png" alt="Red Social 1">
-                  </div>
-                  <div class="red-social-image">
-                    <img src="images/Vector (1).png" alt="Red Social 2">
-                  </div>
-                  <div class="red-social-image">
-                    <img src="images/Vector (2).png" alt="Red Social 3">
-                  </div>
-                  <div class="red-social-image">
-                    <img src="images/Vector (3).png" alt="Red Social 4">
-                  </div>
-                </div>
+              <div class="social-media-image">
+                <img src="images/Facebook Logo.svg" alt="Red Social 3">
+              </div>
+              <div class="social-media-image">
+                <img src="images/Pinterest Logo.svg" alt="Red Social 4">
               </div>
             </div>
           </div>
+    
+          <div class="footer-center">
+            <div class="footer-contact-info-container">
+              <div class="footer-contact-info-box">
+                <h4 class="footer-title-h4">HORARIO</h4>
+                <p>Lunes a Viernes: 9am - 6pm</p>
+              </div>
+    
+              <div class="footer-contact-info-box">
+                <h4 class="footer-title-h4">TELÉFONO</h4>
+                <p>+123 456 789</p>
+              </div>
+            </div>
+          </div>
+    
           <div class="footer-links">
-            <h4>Menú</h4>
-            <ul>
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Galería</a></li>
-              <li><a href="#">Sobre Mí</a></li>
-              <li><a href="#">Contacto</a></li>
+            <h4 class="footer-title-h4">MENÚ</h4>
+            <ul class="footer-links-ul">
+              <li><a href="index.html">INICIO</a></li>
+              <li><a href="galeria.html">GALERÍA</a></li>
+              <li><a href="sobremi.html">SOBRE MÍ</a></li>
+              <li><a href="contacto.html">CONTACTO</a></li>
             </ul>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
-        </div>
       </div>
     </footer>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Pallarols Maria Carolina.</p>
+    </div>
     </main>
   </body>
 </html>
