@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let page = 1;
   const productosJson = [];
   const galeriaFotosGrid = document.querySelector(".inicio_galeria_fotos_grid");
+  console.log(productosJson);
 
   function cargarProductos() {
     const startIndex = (page - 1) * productsPerPage;
@@ -11,9 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const productsToShow = productosJson.slice(startIndex, endIndex);
 
     productsToShow.forEach((product, index) => {
-      const productCard = document.createElement("div");
+      const productCard = document.createElement("a");
       productCard.className = "product-card";
       productCard.id = `producto-${startIndex + index}`;
+      productCard.href = `detalle-producto.html?id=${product.codigo}`;
 
       const productImage = document.createElement("img");
       productImage.className = "product-image";
@@ -25,7 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const productType = document.createElement("p");
       productType.className = "product-type";
-      productType.textContent = `${product.categoria} - #${product.codigo}`;
+      productType.textContent = `${product.categoria.toUpperCase()} - #${
+        product.codigo
+      }`;
 
       const productTitle = document.createElement("h3");
       productTitle.className = "product-title";
