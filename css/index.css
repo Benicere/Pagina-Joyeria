@@ -270,6 +270,7 @@ a {
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin: 40px;
+  margin-bottom: 80px;
 }
 
 /* Estilos de la tarjeta */
@@ -333,7 +334,7 @@ a {
   max-width: 1200px;
   display: flex;
   gap: 50px;
-  margin: 100px 40px;
+  margin: 100px 40px 40px 40px;
 }
 
 .detalle-producto-article {

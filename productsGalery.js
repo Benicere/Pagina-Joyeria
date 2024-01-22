@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let page = 1;
   const productosJson = [];
   const galeriaFotosGrid = document.querySelector(".inicio_galeria_fotos_grid");
-  console.log(productosJson);
 
   function cargarProductos() {
     const startIndex = (page - 1) * productsPerPage;
